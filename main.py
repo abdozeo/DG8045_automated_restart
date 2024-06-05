@@ -20,3 +20,13 @@ password = driver.find_element(By.ID,"password")
 username.send_keys(USR)
 password.send_keys(PASS + Keys.ENTER)
 time.sleep(3) #Succesful LogIn
+
+driver.get("https://192.168.1.1/html/advance.html#device_mngt")
+time.sleep(5)
+btn = driver.find_element(By.ID,"rebootId")
+btn.click()
+time.sleep(5)
+sure_btn = driver.find_element(By.ID,"dev_mngt_modal_id_ok")
+sure_btn.click() #Reboot Sucessful
+time.sleep(5)
+quit()
