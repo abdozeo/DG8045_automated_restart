@@ -5,3 +5,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+
+options = webdriver.ChromeOptions()
+options.add_argument('--ignore-certificate-errors')
+service = Service(executable_path="chromedriver.exe")
+driver = webdriver.Chrome(options=options)
